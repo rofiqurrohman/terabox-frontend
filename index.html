@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Download dan streaming file dari link share TeraBox." />
+    <title>TeraBox Downloader</title>
+    <script>
+      // Pasang tema sebelum Vue jalan supaya tidak "kedip" putih di dark mode.
+      try {
+        const saved = localStorage.getItem('vueuse-color-scheme')
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (saved === 'dark' || ((!saved || saved === 'auto') && prefersDark)) {
+          document.documentElement.classList.add('dark')
+        }
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
